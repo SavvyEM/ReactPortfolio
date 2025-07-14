@@ -1,0 +1,113 @@
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	z-index: 1000;
+}
+
+.modal-backdrop.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal-content {
+	position: relative;
+	background: white;
+	padding: 40px;
+	border-radius: 16px;
+	width: 500px;
+	height: 285px;
+	transform: translateY(-50px);
+	transition: transform 0.5s ease;
+	z-index: 1001;
+	border: 4px solid #fff;
+	box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
+	overflow: hidden;
+}
+
+.modal-content .social-buttons-row {
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.modal-backdrop.show .modal-content {
+	transform: translateY(0);
+}
+
+.modal-close-button {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background: none;
+	border: none;
+	font-size: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 2px;
+	background: #333;
+}
+
+.modal-close-button::before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.social-button {
+	align-items: center;
+	display: flex;
+	height: 44px;
+	width: auto;
+	min-width: 120px;
+	padding: 0 18px;
+	border-radius: 44px;
+	background: black;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	margin-right: 12px;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.social-button:last-child {
+	margin-right: 0;
+}
+
+.social {
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	margin-right: 22px;
+}
+
+.social-button:hover {
+	background: #4824ff;
+	filter: drop-shadow(0px 0px 6px #4824ff40);
+	color: #eeebff;
+}
