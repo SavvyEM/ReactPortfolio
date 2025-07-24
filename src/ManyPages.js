@@ -2,8 +2,8 @@ import React from "react";
 
 const ManyPages = () => {
   return (
-    <div>
-      <p style={{ fontSize: "60px" }}>ManyPages</p>
+    <div style={{ fontSize: '28px', textAlign: 'center', margin: '220px' }}>
+      Работы пока не загружены
     </div>
   );
 };
